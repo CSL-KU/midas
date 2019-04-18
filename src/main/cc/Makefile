@@ -88,7 +88,7 @@ emul_files := simif simif_emul emul/mmio_$(PLATFORM) sample/sample
 emul_h     := $(driver_h) $(endpoint_h)  $( $(addprefix $(midas_dir)/, $(addsuffix .h, $(emul_files) emul/mmio)))
 # This includes c sources and static libraries
 emul_cc    := $(DRIVER) $(endpoint_cc) $(addprefix $(midas_dir)/, $(addsuffix .cc, $(emul_files) sample/simif_sample)) $(lib)
-emul_v     := $(design_vh) $(design_v) $(VERILOG_INC) $(v_dir)/BUFGCE.v
+emul_v     := $(design_vh) $(design_v) $(v_dir)/BUFGCE.v
 
 # The lop level module must be called out for verilator
 ifeq ($(PLATFORM),zynq)
